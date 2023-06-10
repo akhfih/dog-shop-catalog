@@ -1,0 +1,17 @@
+// Custom Bootstrap variable overrides go first
+// $theme-colors: (
+//     'primary': #145bea,
+//     'secondary': #833bec,
+//     'success': #1ce1ac,
+//     'info': #ff7d50,
+//     'warning': #ffbe0b,
+//     'danger': #ff007f,
+//     'light': #c0ccda,
+//     'dark': #001738,
+// );
+// Then include the following
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap-vue/src/index.scss';
+
+// And define any of your custom or additional CSS/SCSS here,
+// or via an @import

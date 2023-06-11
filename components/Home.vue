@@ -1,6 +1,8 @@
 <!-- Please remove this file from your project -->
 <template>
-  <div>Home Page</div>
+  <div>
+    <TheHero></TheHero>
+  </div>
 </template>
 
 <script>

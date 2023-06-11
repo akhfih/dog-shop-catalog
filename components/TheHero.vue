@@ -45,7 +45,7 @@ export default {
   align-items: center;
 
   &__text {
-    max-width: 400px;
+    max-width: 586px;
     color: #111827;
     text-align: center;
     h1 {

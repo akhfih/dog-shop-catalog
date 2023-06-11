@@ -8,17 +8,11 @@
 
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav class="ml-auto">
-            <b-nav-item
-              ><nuxt-link class="nuxt-link" exact to="/"
-                >Home</nuxt-link
-              ></b-nav-item
-            >
+            <li><nuxt-link class="nuxt-link" exact to="/">Home</nuxt-link></li>
 
-            <b-nav-item
-              ><nuxt-link class="nuxt-link" exact to="/About"
-                >About</nuxt-link
-              ></b-nav-item
-            >
+            <li>
+              <nuxt-link class="nuxt-link" exact to="/About">About</nuxt-link>
+            </li>
           </b-navbar-nav>
 
           <!-- Right aligned nav items -->
@@ -63,7 +57,12 @@ export default {
 }
 
 .nuxt-link {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 24px;
   color: #111827;
+  margin-left: 24px;
   &:hover {
     text-decoration: none;
     color: #4b4efc;

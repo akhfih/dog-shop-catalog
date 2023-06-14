@@ -9,8 +9,8 @@
         </h1>
         <p>{{ content.text }}</p>
       </div>
-      <div hero__image>
-        <img :src="image" alt="hero_image" />
+      <div>
+        <img class="hero__image" :src="image" alt="hero_image" />
       </div>
     </div>
   </div>
@@ -43,6 +43,13 @@ export default {
   max-width: 1216px;
   margin: 64px auto;
   align-items: center;
+
+  &__image {
+    @media (max-width: 574px) {
+      width: 90%;
+      height: auto;
+    }
+  }
 
   &__text {
     max-width: 586px;

@@ -6,10 +6,9 @@
       img-alt="Image"
       img-top
       tag="div"
-      class="custom-card"
       @click="clickHandler"
     >
-      <b-card-text> {{ text }} </b-card-text>
+      <b-card-text> <slot name="text"></slot> </b-card-text>
     </b-card>
   </div>
 </template>
@@ -48,18 +47,20 @@ export default {
   max-height: 223px;
   box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
   border: 1px solid #f9fafb;
+  margin: auto;
 
   cursor: pointer;
 
   &:hover {
-    box-shadow: 0px 20px 25px -5px rgba(16, 24, 40, 0.1),
-      0px 8px 10px -6px rgba(16, 24, 40, 0.1);
+    border: 1px solid #f9fafb;
+    box-shadow: 0px 25px 50px -12px rgba(1, 72, 215, 0.25);
   }
   img {
     border-radius: 6px;
     max-width: 160px;
     max-height: 153px;
-    // object-fit: contain;
+    min-height: 153px;
+    object-fit: contain;
     object-fit: cover;
     border: 1px solid #f9fafb;
   }

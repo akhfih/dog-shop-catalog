@@ -145,11 +145,15 @@ export const state = () => ({
     },
   ], */
   breedsdatafetch: [],
+  breedimages: [],
 })
 
 export const mutations = {
   updateBreedsData: (state, data) => {
     state.breedsdatafetch = data
+  },
+  updateBreedImage: (state, data) => {
+    state.breedimages = data
   },
 }
 
@@ -167,6 +171,17 @@ export const actions = {
         .then((response) => response.json())
         .then((data) => {
           commit('updateBreedsData', Object.entries(data.message))
+        })
+    } catch (err) {}
+  },
+  async getBreedImages({ state, commit }, breed) {
+    if (state.breedimages.length) return
+
+    try {
+      await fetch(`https://dog.ceo/api/breed/${breed}/images`)
+        .then((response) => response.json())
+        .then((data) => {
+          commit('updateBreedImage', data.message)
         })
     } catch (err) {}
   },
